@@ -19,24 +19,22 @@ GRID_NAME='MOD_Grid_BRDF';
 DATAFIELD_NAME='Albedo_BSA_Band1';
 
 % Find all files in Directory
-cd(data_read_dir)
-d = dir('MCD43A3*');
-xi = size(d);
+    cd(data_read_dir)
+    d = dir('MCD43A3*');
+    xi = size(d);
 % READ TEXTFILE TO SEE WHAT FILES ARE MISSING
-cd(data_write_dir)
-old = load('MCD43A3_joklar_tmp.txt')
-newst_date_in_file = old(end,1)
+    cd(data_write_dir)
+    old = load('MCD43A3_joklar_tmp.txt')
+    newst_date_in_file = old(end,1)
 
 cd(data_read_dir)
     for i = 1:xi;
         d(i).yeardoy = str2num(d(i).name(10:16))
     end
+    
 tmp = [d(:).yeardoy];
-
 ind_start_date = find(tmp==newst_date_in_file)
-
 new_hdf_date = tmp(end)
-
 ind_start_date = ind_start_date +1;
 
 if new_hdf_date == newst_date_in_file
