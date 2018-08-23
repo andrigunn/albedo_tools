@@ -1,28 +1,30 @@
 
-export_average_albedo_read_txt_for_plotting
-
-img_dir ='/Volumes/brunnur/brunnur_results/img'
-
-S = num2str(A.d)
-
-year = str2num(S(:,1:4))
-doy = str2num(S(:,5:7))
-
-xi = find(year == 2018)
-xii = find(year == 2017)
-xiii = find(year == 2016)
-
-window_size = 7
-Mva = movAv(A.a_va,window_size)
-Mho = movAv(A.a_ho,window_size)
-Mla = movAv(A.a_la,window_size)
+% export_average_albedo_read_txt_for_plotting
+% 
+% img_dir ='/Volumes/brunnur/brunnur_results/img'
+% 
+% S = num2str(A.d)
+% 
+% year = str2num(S(:,1:4))
+% doy = str2num(S(:,5:7))
+% 
+% xi = find(year == 2018)
+% xii = find(year == 2017)
+% xiii = find(year == 2016)
+% 
+% window_size = 7
+% Mva = movAv(A.Va_alb,window_size)
+% Mho = movAv(A.Ho_alb,window_size)
+% Mla = movAv(A.La_alb,window_size)
 %
+A = TS_Glaciers_MCD43A3 ;
+%%
 for i = 1:365
-    x = find(doy == i)
-    ltm_va  = nanmedian(A.a_va(x)) 
-    maxx_va = nanmax(A.a_va(x)) 
-    minn_va = nanmin(A.a_va(x))  
-    stdev_va = nanstd(A.a_va(x))  
+    x = find(A.doy(:) == i)
+    ltm_va  = nanmedian(A.Va_alb(x)) 
+    maxx_va = nanmax(A.Va_alb(x)) 
+    minn_va = nanmin(A.Va_alb(x))  
+    stdev_va = nanstd(A.Va_alb(x))  
     
     stats.doy(i) = i
     stats.ltm_va(i) = ltm_va
@@ -31,10 +33,10 @@ for i = 1:365
     stats.stdev_va(i) = stdev_va
     
     
-    ltm_ho  = nanmedian(A.a_ho(x)) 
-    maxx_ho = nanmax(A.a_ho(x)) 
-    minn_ho = nanmin(A.a_ho(x))  
-    stdev_ho = nanstd(A.a_ho(x))  
+    ltm_ho  = nanmedian(A.Ho_alb(x)) 
+    maxx_ho = nanmax(A.Ho_alb(x)) 
+    minn_ho = nanmin(A.Ho_alb(x))  
+    stdev_ho = nanstd(A.Ho_alb(x))  
     
     stats.ltm_ho(i) = ltm_ho
     stats.maxx_ho(i) = maxx_ho
@@ -42,10 +44,10 @@ for i = 1:365
     stats.stdev_ho(i) = stdev_ho
     
     
-    ltm_la  = nanmedian(A.a_la(x)) 
-    maxx_la = nanmax(A.a_la(x)) 
-    minn_la = nanmin(A.a_la(x))  
-    stdev_la = nanstd(A.a_la(x))  
+    ltm_la  = nanmedian(A.La_alb(x)) 
+    maxx_la = nanmax(A.La_alb(x)) 
+    minn_la = nanmin(A.La_alb(x))  
+    stdev_la = nanstd(A.La_alb(x))  
     
     stats.ltm_la(i) = ltm_la
     stats.maxx_la(i) = maxx_la
@@ -53,7 +55,7 @@ for i = 1:365
     stats.stdev_la(i) = stdev_la
         
 end
-%
+%%
 close all
 
 fva =figure(), hold on 
