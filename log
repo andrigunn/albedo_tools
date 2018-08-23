@@ -1,0 +1,129 @@
+
+                                                                               < M A T L A B (R) >
+                                                                     Copyright 1984-2018 The MathWorks, Inc.
+                                                                      R2018a (9.4.0.813654) 64-bit (maci64)
+                                                                                February 23, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+ /Users/andrigun/Documents/GitHub/albedo_tool/master_albedo.m
+ |
+{Error: Invalid use of operator.
+} 
+
+ans =
+
+    '/Users/andrigun/Documents/GitHub/albedo_tools'
+
+ -r master_albedo
+    |
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To construct matrices, use brackets instead of
+parentheses.
+} 
+ -r master_albedo.r
+    |
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To construct matrices, use brackets instead of
+parentheses.
+} 
+ -r master_albedo.m
+    |
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To construct matrices, use brackets instead of
+parentheses.
+} 
+ -r "master_albedo.m"
+    |
+{Error: Invalid use of operator.
+} 
+ -run  "master_albedo.m"
+       |
+{Error: Invalid use of operator.
+} 
+{Undefined function or variable 'matlab'.
+} 
+Getting file MCD43A3.A2018197.h17v02.006.2018206175642.hdf 
+/Users/andrigun/Documents/GitHub/albedo_tools
+Getting file MCD43A3.A2018198.h17v02.006.2018207035424.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018199.h17v02.006.2018208040928.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018200.h17v02.006.2018209103735.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018201.h17v02.006.2018210042612.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018202.h17v02.006.2018211035859.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018203.h17v02.006.2018212042149.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018204.h17v02.006.2018213041211.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018205.h17v02.006.2018214041201.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018206.h17v02.006.2018215221652.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018207.h17v02.006.2018220220204.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018208.h17v02.006.2018220224343.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018209.h17v02.006.2018220230159.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018210.h17v02.006.2018226164606.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018211.h17v02.006.2018226173103.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018212.h17v02.006.2018226175851.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018213.h17v02.006.2018226181825.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018214.h17v02.006.2018226184023.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018215.h17v02.006.2018233143647.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018216.h17v02.006.2018233150300.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018217.h17v02.006.2018233154140.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018218.h17v02.006.2018233160649.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018219.h17v02.006.2018233162855.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018220.h17v02.006.2018233184831.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018221.h17v02.006.2018233212632.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018222.h17v02.006.2018233231836.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018223.h17v02.006.2018234002147.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018224.h17v02.006.2018234005106.hdf 
+/Volumes/brunnur/data/MCD43A3
+
+ans =
+
+     0
+
+
+geo = 
+
+  struct with fields:
+
+           lat: [2400x2400 double]
+           lon: [2400x2400 double]
+    utlina_isl: [6246x1 struct]
+    utlina_vat: [1x1 struct]
+    utlina_hof: [3x1 struct]
+    utlina_lan: [2x1 struct]
+         masks: [1x1 struct]
+           ins: [1x1 struct]
+
+
+newst_date_in_file =
+
+     2018224
+
+
+ans =
+
+    'No new data since last run'
+
