@@ -1,0 +1,90 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+                   R2018a (9.4.0.813654) 64-bit (maci64)
+                             February 23, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    'Processing time start: 24-Aug-2018 14:10:07'
+
+Getting file MCD43A3.A2018198.h17v02.006.2018207035424.hdf 
+/Users/andrigun/Documents/GitHub/albedo_tools
+Getting file MCD43A3.A2018199.h17v02.006.2018208040928.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018200.h17v02.006.2018209103735.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018201.h17v02.006.2018210042612.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018202.h17v02.006.2018211035859.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018203.h17v02.006.2018212042149.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018204.h17v02.006.2018213041211.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018205.h17v02.006.2018214041201.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018206.h17v02.006.2018215221652.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018207.h17v02.006.2018220220204.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018208.h17v02.006.2018220224343.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018209.h17v02.006.2018220230159.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018210.h17v02.006.2018226164606.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018211.h17v02.006.2018226173103.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018212.h17v02.006.2018226175851.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018213.h17v02.006.2018226181825.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018214.h17v02.006.2018226184023.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018215.h17v02.006.2018233143647.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018216.h17v02.006.2018233150300.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018217.h17v02.006.2018233154140.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018218.h17v02.006.2018233160649.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018219.h17v02.006.2018233162855.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018220.h17v02.006.2018233184831.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018221.h17v02.006.2018233212632.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018222.h17v02.006.2018233231836.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018223.h17v02.006.2018234002147.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018224.h17v02.006.2018234005106.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018225.h17v02.006.2018235202317.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018226.h17v02.006.2018235204030.hdf 
+/Volumes/brunnur/data/MCD43A3
+Getting file MCD43A3.A2018227.h17v02.006.2018236034359.hdf 
+/Volumes/brunnur/data/MCD43A3
+
+ans =
+
+     0
+
+
+ans =
+
+    'No new data since last run'
+
+
+ans =
+
+    'Processing time end: 24-Aug-2018 14:14:36'
+
