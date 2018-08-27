@@ -129,7 +129,7 @@ plot(A.doy(xi),Mho(xi),'r','Linewidth',1.3)
 plot(A.doy(xii),Mho(xii),'r--')
 plot(A.doy(xiii),Mho(xiii),'bl--')
 
-legend('Median','+/- std','2017','2016','2015','AutoUpdate','off')
+legend('Median','+/- std','2018','2017','2016','AutoUpdate','off')
 plot(stats.doy,stats.ltm_ho-stats.stdev_ho,'color',C,'Linewidth',1.2)
 
 xlabel('Dagur Ársins')
@@ -185,7 +185,7 @@ plot(A.doy(xi),Mla(xi),'r','Linewidth',1.3)
 plot(A.doy(xii),Mla(xii),'r--')
 plot(A.doy(xiii),Mla(xiii),'bl--')
 
-legend('Median','+/- std','2017','2016','2015','AutoUpdate','off')
+legend('Median','+/- std','2018','2017','2016','AutoUpdate','off')
 plot(stats.doy,stats.ltm_la-stats.stdev_la,'color',C,'Linewidth',1.2)
 
 xlabel('Dagur Ársins')
