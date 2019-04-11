@@ -45,65 +45,65 @@ function [DATA, DATA_NAME,HDF_DATE] = import_MODIS_data(FILE_NAME, GRID_NAME, DA
 % DATAFIELD_NAME='Maximum_Snow_Extent';
 
 %% Settings
-HDF_DATE = FILE_NAME(10:16);  %Dagsetning á skránni sem lesin er inn
-HDF_PRODUCT = FILE_NAME(1:7); %Breyta í skránni sem lesin er inn MOD/MCD og svo framv.
-DATA_NAME = [HDF_PRODUCT '_' HDF_DATE '_' DATAFIELD_NAME]; % Nafn á skránni sem kemur út
+HDF_DATE = FILE_NAME(10:16);  %Dagsetning ï¿½ skrï¿½nni sem lesin er inn
+HDF_PRODUCT = FILE_NAME(1:7); %Breyta ï¿½ skrï¿½nni sem lesin er inn MOD/MCD og svo framv.
+DATA_NAME = [HDF_PRODUCT '_' HDF_DATE '_' DATAFIELD_NAME]; % Nafn ï¿½ skrï¿½nni sem kemur ï¿½t
 %%
-% Fill value and scale settings %% Sjá í leiðbeiningum með gögnum
+% Fill value and scale settings %% Sjï¿½ ï¿½ leiï¿½beiningum meï¿½ gï¿½gnum
 if HDF_PRODUCT == 'MCD43A3';
-scale_factor = 0.001;       %    
-fill_value = 32767;         %
-replace_fill_value = nan;   %
+    scale_factor = 0.001;       %    
+    fill_value = 32767;         %
+    replace_fill_value = nan;   %
 elseif HDF_PRODUCT == 'MOD10A1';
-scale_factor = 1;           % Skölun er ekki notuð í MOD10A1
-fill_value = 255;           %
-remove_values_larger_than = 100;        %
-replace_fill_value = nan;   %
+    scale_factor = 1;           % Skï¿½lun er ekki notuï¿½ ï¿½ MOD10A1
+    fill_value = 255;           %
+    remove_values_larger_than = 100;        %
+    replace_fill_value = nan;   %
 elseif HDF_PRODUCT == 'MYD10A1';
-scale_factor = 1;           % Skölun er ekki notuð í MOD10A1
-fill_value = 255;           %
-remove_values_larger_than = 100;        %
-replace_fill_value = nan;   %
+    scale_factor = 1;           % Skï¿½lun er ekki notuï¿½ ï¿½ MOD10A1
+    fill_value = 255;           %
+    remove_values_larger_than = 100;        %
+    replace_fill_value = nan;   %
 elseif HDF_PRODUCT == 'MOD10A2';
-scale_factor = 1;           % Skölun er ekki notuð í MOD10A1
-fill_value = 255;           %
-remove_values_larger_than = 200;        
-remove_values_smaller_than = 25;
-replace_fill_value = nan;   %
+    scale_factor = 1;           % Skï¿½lun er ekki notuï¿½ ï¿½ MOD10A1
+    fill_value = 255;           %
+    remove_values_larger_than = 200;        
+    remove_values_smaller_than = 25;
+    replace_fill_value = nan;   %
 end
 % CODE
 % Open the HDF-EOS2 Grid file.
-data = hdfread(FILE_NAME, GRID_NAME, 'Fields', DATAFIELD_NAME);
+    data = hdfread(FILE_NAME, GRID_NAME, 'Fields', DATAFIELD_NAME);
 % Convert the data to double type for plot.
-data=double(data);
+    data=double(data);
 % Transpose the data to match the map projection.
-data=data*scale_factor;
+    data=data*scale_factor;
 % Remove fill value with 
 if HDF_PRODUCT == 'MOD10A1';
-data(data > remove_values_larger_than) = replace_fill_value;    
-elseif HDF_PRODUCT == 'MYD10A1';
-data(data > remove_values_larger_than) = replace_fill_value;    
-elseif HDF_PRODUCT == 'MOD10A2';
-data(data > remove_values_larger_than) = replace_fill_value;    
-data(data < remove_values_smaller_than) = replace_fill_value;    
-data(data == 37) = replace_fill_value;  %lake    
-data(data == 39) = replace_fill_value;  %ocean  
-data(data == 50) = replace_fill_value;  %cloud  
-data(data == 100) = replace_fill_value; %lake ice   
-elseif HDF_PRODUCT == 'MYD10A2';
-data(data > remove_values_larger_than) = replace_fill_value;    
-data(data < remove_values_smaller_than) = replace_fill_value;    
-data(data == 37) = replace_fill_value;  %lake    
-data(data == 39) = replace_fill_value;  %ocean  
-data(data == 50) = replace_fill_value;  %cloud  
-data(data == 100) = replace_fill_value; %lake ice   
-else
-data(data == fill_value*scale_factor) = replace_fill_value;
+        data(data > remove_values_larger_than) = replace_fill_value;       
+    elseif HDF_PRODUCT == 'MYD10A1';
+        data(data > remove_values_larger_than) = replace_fill_value;    
+    elseif HDF_PRODUCT == 'MOD10A2';
+        data(data > remove_values_larger_than) = replace_fill_value;    
+        data(data < remove_values_smaller_than) = replace_fill_value;    
+        data(data == 37) = replace_fill_value;  %lake    
+        data(data == 39) = replace_fill_value;  %ocean  
+        data(data == 50) = replace_fill_value;  %cloud  
+        data(data == 100) = replace_fill_value; %lake ice   
+    elseif HDF_PRODUCT == 'MYD10A2';
+        data(data > remove_values_larger_than) = replace_fill_value;    
+        data(data < remove_values_smaller_than) = replace_fill_value;    
+        data(data == 37) = replace_fill_value;  %lake    
+        data(data == 39) = replace_fill_value;  %ocean  
+        data(data == 50) = replace_fill_value;  %cloud  
+        data(data == 100) = replace_fill_value; %lake ice   
+    else
+        data(data == fill_value*scale_factor) = replace_fill_value;
 end
 
 DATA = data;
 
-%eval([DATA_NAME '= data;']); 
+
 
 
 

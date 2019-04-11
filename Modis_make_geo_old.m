@@ -1,5 +1,5 @@
 %% Make geo files for plotting MODIS data
-function geo = Modis_make_geo(geo_data_dir)
+function geo = Modis_make_geo_old(geo_data_dir)
 %cd('E:\Dropbox\01 - Icelandic Snow Observatory - ISO\ISCA\05_data\geo')
 cd(geo_data_dir);
 load('geo_hv17.mat');

@@ -5,7 +5,7 @@ function [ins, outs] = Modis_make_ins_outs(geo_data_dir);
 % outs where data outside the shapefile is 1
 %%
 clc
-cd([geo_data_dir,'\ins'])
+cd([geo_data_dir,'/ins'])
 
 %%
 load('in_Hofsj.mat')

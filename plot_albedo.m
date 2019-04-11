@@ -75,7 +75,7 @@ plot(A.doy(xi),Mva(xi),'r','Linewidth',1.3)
 plot(A.doy(xii),Mva(xii),'r--')
 plot(A.doy(xiii),Mva(xiii),'bl--')
 
-legend('Median','+/- std','2018','2017','2016','AutoUpdate','off')
+legend('Median','+/- std',num2str(Current_Year),num2str(Last_Year),num2str(Last_Last_Year),'AutoUpdate','off')
 plot(stats.doy,stats.ltm_va-stats.stdev_va,'color',C,'Linewidth',1.2)
 
 xlabel('Dagur ársins')
@@ -121,7 +121,7 @@ ylim([minax maxax])
 fig_name = ['MCD43A3_alb_va_ts_ver_',datestr(now,'yyyymmdd')]
 saveas(fva,fig_name,'png');
 
-% HO
+%% HO
 fho =figure(), hold on 
 plot(stats.doy,stats.ltm_ho,'color','k','Linewidth',1.2)
 plot(stats.doy,stats.ltm_ho+stats.stdev_ho,'color',C,'Linewidth',1.2)
@@ -129,7 +129,7 @@ plot(A.doy(xi),Mho(xi),'r','Linewidth',1.3)
 plot(A.doy(xii),Mho(xii),'r--')
 plot(A.doy(xiii),Mho(xiii),'bl--')
 
-legend('Median','+/- std','2018','2017','2016','AutoUpdate','off')
+legend('Median','+/- std',num2str(Current_Year),num2str(Last_Year),num2str(Last_Last_Year),'AutoUpdate','off')
 plot(stats.doy,stats.ltm_ho-stats.stdev_ho,'color',C,'Linewidth',1.2)
 
 xlabel('Dagur Ársins')
@@ -185,7 +185,7 @@ plot(A.doy(xi),Mla(xi),'r','Linewidth',1.3)
 plot(A.doy(xii),Mla(xii),'r--')
 plot(A.doy(xiii),Mla(xiii),'bl--')
 
-legend('Median','+/- std','2018','2017','2016','AutoUpdate','off')
+legend('Median','+/- std',num2str(Current_Year),num2str(Last_Year),num2str(Last_Last_Year),'AutoUpdate','off')
 plot(stats.doy,stats.ltm_la-stats.stdev_la,'color',C,'Linewidth',1.2)
 
 xlabel('Dagur Ársins')
